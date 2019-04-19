@@ -1,5 +1,10 @@
 #!/bin/bash
-DOCKER_FILES=~/docker
+### DOCKER_FILES is where you want to place the docker recipes
+### If you are using my images. It is best that you place the docker recipes in a subfolder named chazzofalf
+if [[ -z "$DOCKER_FILES" ]]
+then
+	DOCKER_FILES=~/docker
+fi
 docker-stupid-build-profile()
 {
 	profile="$1"
